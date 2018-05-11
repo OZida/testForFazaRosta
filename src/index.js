@@ -76,7 +76,7 @@ $(document).ready(function(){
 	}); // end blur()
 
 // отправка письма с помощью AJAX
-	$('#submit').submit(function(e){
+	$('.footer_form').submit(function(e){
 		e.preventDefault();
 		if($('.not_error').length == 3) {
 			$.ajax({
@@ -85,12 +85,12 @@ $(document).ready(function(){
 				data: $(this).serialize(),
 
 				beforeSend: function(xhr, textStatus){ 
-					$('#submit').attr('disabled','disabled');
+					$('.footer_form :input').attr('disabled','disabled');
 				},
 
 				success: function(response){
-					$('#submit').removeAttr('disabled');
-					$('#submit').val('').removeClass().next('.error-box').text('');
+					$('.footer_form :input').removeAttr('disabled');
+					$('.footer_form :text, :email, textarea').val('').removeClass();
 					alert(response);
 				}
 			}); // end ajax({...})
