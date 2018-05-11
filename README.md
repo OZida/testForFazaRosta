@@ -2,8 +2,8 @@
 
 ### Build Setup
 
-# install dependencies
-npm i
+  - install dependencies
+$npm i
 
-# serve with hot reload at localhost:8080
-npm run dev 
+  - serve with hot reload at localhost:8080
+$npm run dev 
